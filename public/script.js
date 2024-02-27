@@ -82,7 +82,46 @@ function loadDocument(docId, Nombre, Duracion) {
     form.Nombre.value = Nombre;
     form.Duracion.value = Duracion;
 }
+const updateForm = document.getElementById('update-form');
 
+updateForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const docId = updateForm.querySelector('#update-id').value;
+    const newNombre = updateForm.querySelector('#update-Nombre').value;
+    const newDuracion = parseInt(updateForm.querySelector('#update-Duracion').value);
+
+    // Actualizar el documento en Firestore
+    db.collection('Anime').doc(docId).update({
+        Nombre: newNombre,
+        Duracion: newDuracion
+    })
+    .then(() => {
+        console.log("Se ha Actualizado Correctamente");
+        updateForm.reset();
+    })
+    .catch((error) => {
+        console.error("Error Al Actualizar: ", error);
+    });
+});
+
+const deleteForm = document.getElementById('delete-form');
+
+deleteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const docId = deleteForm.querySelector('#delete-id').value;
+
+    // Eliminar el documento en Firestore
+    db.collection('Anime').doc(docId).delete()
+    .then(() => {
+        console.log("Se ha Borrado Correctamente");
+        deleteForm.reset();
+    })
+    .catch((error) => {
+        console.error("Error Eliminando el Documento: ", error);
+    });
+});
 
        
         
