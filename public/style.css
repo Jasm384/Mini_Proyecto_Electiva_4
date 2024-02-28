@@ -1,0 +1,118 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ebe8e8;
+           }
+           
+           header {
+            background-color: #333;
+            color: #fff;
+            padding: 16px;
+            width: 100%;
+           }
+          
+           header h1{
+            padding-bottom: 8px;
+           }
+           
+           nav ul {
+            display: flex;
+            list-style: none;
+           }
+           
+           nav li a{
+            margin-right: 0px;
+            padding: 8px;
+           }
+           
+           nav a {
+            color: #fff;
+            text-decoration: none;
+           }
+          
+           li a{
+            transition: .2s ease;
+           }
+           
+           li a:hover{
+            background-color: rgb(97, 96, 96);
+           }
+          
+           li a:active {
+            background-color: rgb(75, 79, 83);
+           }
+
+/*------------------------------------------------ Lo de Arriba es del Header ----------------------------------------------------*/
+
+        
+        button, input {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Arial, sans-serif;
+        
+        }
+        
+        .formulario{
+            /*text-align: center;*/
+            text-align: end;
+            flex: 1;
+            padding: 20px;
+            font-size: 1rem;
+            background-color: rgba(83, 91, 92, 0.613);
+        }
+
+        .formulario input{
+            border-radius: 90px;
+            padding: 6px;
+            margin: 10px;
+            border: none;
+        }
+
+        .formP{
+            text-align: center;
+            flex: 1;
+            padding: 20px;
+            font-size: 1rem;
+        }
+        
+        .button{
+            padding: 8px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 40;
+            transition: .2s ease;
+        }
+        
+        .button:hover{
+            background-color: rgb(149, 197, 197);
+        }
+        
+        .button--primary{
+            background-color: rgb(86, 93, 100);
+            color: rgb(255, 255, 255);
+        }
+        
+        .button--secondary{
+            background-color: rgb(86, 93, 100);
+            color: rgb(255, 255, 255);
+        }
+        .button--three{
+            background-color: rgb(86, 93, 100);
+            color: rgb(255, 255, 255);
+        }
+
+
+
+        footer{
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            bottom: 0;
+            position: absolute; 
+            text-align: center;
+            width: 100%;
+        }
+        
