@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Firebase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1><i>Gestion de Servicios de Animes</i></h1>
+    <nav>
+        <ul>
+            
+            <li><a href="index.html">Gestion de Animes</a></li> 
+            <li><a href="videojuegos.html">Gestion de VideoJuegos</a></li>
+            <li><a href="series.html">Gestion de Series</a></li>
+        </ul>
+    </nav>
+</header>
+
+  
+    <div class="formulario">
+      <form id="FormularioCrud" class="FormularioCrud">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" required placeholder="Ingresa un Nombre">
+        <label for="Duracion">Duracion de Horas:</label>
+        <input type="number" id="Duracion" required placeholder="Ingresa una Cantidad ">
+        <button type="submit" class="button button--primary">Guardar</button>
+        <input type="hidden" id="doc-id">
+      </form>
+  </div>
+
+<div class="formulario">
+    <form id="update-form">
+      <input type="text" id="update-id" placeholder="ID del documento a actualizar">
+      <input type="text" id="update-Nombre" placeholder="Nombre">
+      <input type="number" id="update-Duracion" placeholder="Cantidad">
+      <button type="submit" class="button button--secondary">Actualizar</button>
+    </form>
+</div>
+
+  <div class="formulario">
+  <form id="delete-form">
+    <input type="text" id="delete-id" placeholder="Eliminar ID">
+    <button type="submit" class="button button--three">Eliminar</button>
+  </form>
+</div>
+
+<div id="user-list" class="formP"></div>
+
+
+
+<footer>
+  <p>Derechos de autor © 2024 Proyecto <i>DIJAN</i></p>
+</footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
